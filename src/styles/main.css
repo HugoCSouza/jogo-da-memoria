@@ -1,43 +1,49 @@
-/* Importações de arquivos e fontes */
+/* Estilos Globais */
+
 @import 'reset.css';
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Estilos do Corpo */
 
-
-/* Começo do CSS*/
-body{
+body {
     font-family: 'Press Start 2P', cursive;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #fc1fca;
+    background: #332f2f;
     user-select: none;
 }
 
-.container{
+/* Estilos do Contêiner Principal */
+
+.container {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    background: linear-gradient(135deg, 
-                                rgba(9,94,121,1) 0%,
-                                rgba(4,7,191,1) 26%,
-                                rgba(125,0,255,0.6235827664399093) 66%,
-                                rgba(187,0,255,1) 90%);
+    background: linear-gradient(135deg,
+            rgba(9, 94, 121, 1) 0%,
+            rgba(4, 7, 191, 1) 26%,
+            rgba(125, 0, 255, 0.6235827664399093) 66%,
+            rgba(187, 0, 255, 1) 90%);
     padding: 40px 60px;
 }
 
-h2{
+/* Estilos para Títulos */
+
+h2 {
     font-size: 3em;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
 
-.reset{
+/* Estilos para Botão de Reset */
+
+.reset {
     width: 100%;
     padding: 15px 20px;
     color: #000;
@@ -50,15 +56,16 @@ h2{
     font-weight: 600;
 }
 
-.reset:focus{
+.reset:focus {
     color: #e385a1;
     background-color: #95e385;
 }
 
-.game{
+/* Estilos para o Jogo */
+
+.game {
     width: 430px;
     height: 430px;
-    border: 1px solid #fff;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -66,34 +73,36 @@ h2{
     perspective: 500px;
 }
 
-.card{
+/* Estilos para Cartas */
+
+.card {
     position: relative;
     width: 100px;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #95e385;
+    background-color: #e6ece5;
     font-size: 3em;
-    transform: rotateY(180deg);
-    transition: 0.5s;
+    transform: rotateY(0deg);
+    transition: 0.25s;
 }
 
-.card::after{
+.card::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: #15da30;
-    transition: 0.25s;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-
-}
-
-.card.boxOpen{
+    background: #404440;
+    transition: 0.9s;
     transform: rotateY(0deg);
+    /* opacity: .9; */
+    backface-visibility: hidden;
 }
 
-.boxOpen::after, .boxMatch::after{
-    transform: rotateY(1800deg);
+.card.boxOpen {
+    transform: rotateY(180deg);
 }
+
+/* .boxOpen::after, .boxMatch::after {
+    transform: rotateY(180deg);
+} */

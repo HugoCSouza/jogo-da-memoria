@@ -1,22 +1,16 @@
-# 🚀 Desafio do jogo no Detona Ralph
-Repositório para desenvolver um jogo do Detona Ralph da DIO
+# 🚀 Jogo da memória
+Repositório para desenvolver um jogo da memória como desafio do bootcamp de jogos da [DIO](https://web.dio.me/home)
 
 ## Objetivo
-Criar um jogo web do Detona Ralph cuja as funcionalidades são:
-* Em uma grade 3x3, o Detona Ralph aparecer aleatoricamente em cada um dos quadrados;
-* A cada clique configura um ponto a mais;
-* O jogador vai ter 60 segundos pra fazer o máximo de pontos possível;
+Criar um jogo da memória Web 3x3 utilizando emojis.
 
 O jogo deve ser uma aplicação web divida entre:
 * HTML para fazer a marcação da página;
 * CSS para delimitar o estilo;
 * JavaScript para fazer a engine de funcionamento;
 
-Foram adicionadas as seguintes features para melhorar o jogo:
-* Funcionamento completo da contagem de vida, fazendo com que a cada clique fora do quadrado onde está o Detona Ralph, diminua uma vida;
-* Se a vida ou o tempo chegue a 0, encerre o funcionamento do jogo;
-* Mudança no estilo básico do CSS deixando mais amigável
-* Um leve toque de humor
+Observações:
+* Caso você seja aluno e esteja seguindo passo a passo e tenha problema com a rotação dos cards, esse bug está corrigido no código e explicado no commit "correção do bug css e finalização".
 
 ## Resultado
 
