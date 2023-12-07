@@ -7,66 +7,70 @@
 /* Começo do CSS*/
 body{
     font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fc1fca;
 }
 
 .container{
+    position: relative;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    background-color: #c0c0c0;
-    background-image:   linear-gradient(335deg, #bb000065 23px, transparent 23px),
-                        linear-gradient(155deg, #dd000065 23px, transparent 23px),
-                        linear-gradient(335deg, #bb000065 23px, transparent 23px),
-                        linear-gradient(155deg, #dd000065 23px, transparent 23px);
-    background-size: 58px 58px;
-    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
-}
-
-.menu{
-    display: flex;
-    justify-content:space-evenly;
+    justify-content: center;
     align-items: center;
-
-    height: 90px;
-    width: 100%;
-    background: linear-gradient(rgba(138, 119, 119, 0.9), rgb(166, 214, 235), rgba(173, 146, 146, 0.6));
-
-    border-bottom: 5px solid #a0522d;
+    gap: 30px;
+    background: linear-gradient(135deg, 
+                                rgba(9,94,121,1) 0%,
+                                rgba(4,7,191,1) 26%,
+                                rgba(125,0,255,0.6235827664399093) 66%,
+                                rgba(187,0,255,1) 90%);
+    padding: 40px 60px;
 }
 
-.panel{
-    margin-top: 1rem;
+h2{
+    font-size: 3em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.reset{
+    width: 100%;
+    padding: 15px 20px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.reset:focus{
+    color: #e385a1;
+    background-color: #95e385;
+}
+
+.game{
+    width: 430px;
+    height: 430px;
+    border: 1px solid #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.card{
+    position: relative;
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #95e385;
 }
-
-.square{
-    height: 150px;
-    width: 150px;
-    border: 1px solid #003780;
-    background-color:#def;
-    background-image:   radial-gradient(closest-side, transparent 98%, rgba(0,0,0,.3) 99%),
-                        radial-gradient(closest-side, transparent 98%, rgba(0,0,0,.3) 99%);
-    background-size:80px 80px;
-    background-position:0 0, 40px 40px;
-}
-
-.enemy{
-    background-image: url("../images/ralph.png");
-    background-size: cover;
-}
-
-.menu-lifes{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.menu-time h2:nth-child(2), 
-.menu-score h2:nth-child(2){
-    margin-top: 10px;
-    color: #e5e905;
-}
-
