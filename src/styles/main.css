@@ -84,8 +84,8 @@ h2 {
     justify-content: center;
     background-color: #e6ece5;
     font-size: 3em;
-    transform: rotateY(0deg);
-    transition: 0.25s;
+    transform: rotateY(360deg);
+    transition: 0.20s;
 }
 
 .card::after {
