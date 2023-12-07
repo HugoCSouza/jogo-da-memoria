@@ -12,6 +12,7 @@ body{
     align-items: center;
     min-height: 100vh;
     background: #fc1fca;
+    user-select: none;
 }
 
 .container{
@@ -73,4 +74,26 @@ h2{
     align-items: center;
     justify-content: center;
     background-color: #95e385;
+    font-size: 3em;
+    transform: rotateY(180deg);
+    transition: 0.5s;
+}
+
+.card::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #15da30;
+    transition: 0.25s;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+
+}
+
+.card.boxOpen{
+    transform: rotateY(0deg);
+}
+
+.boxOpen::after, .boxMatch::after{
+    transform: rotateY(1800deg);
 }
